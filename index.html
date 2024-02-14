@@ -236,7 +236,7 @@
               <div class="row mb-3 card info-card px-4">
                 <p class="card-title">Please select your constituency</p>
                 <div class="col-md-6 d-flex mb-3">
-                
+
                   <label for="folderSelect" class="form-label col-3 ">Assembly:</label>
                   <select id="folderSelect" class="form-select" onchange="loadData()">
                     <option value="NAT">National</option>
@@ -378,6 +378,101 @@
           </div>
           <script>
 
+
+            const ElectionData = {
+              NAT47: {
+                link: "https://drive.google.com/drive/folders/1-M4_xA7tQlHPGk9G_WprHWv3CoZ2gMPM?usp=drive_link",
+                mirrorLink: "https://drive.google.com/drive/folders/1TigN_5uT5lrI8_1ll5-s8ZBZyfhayBG7",
+                winnerParty: "PMLN",
+                winnerPartyVotes: "102502",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "86396",
+                singleFile: true
+              },
+
+
+              NAT48: {
+                link: "https://drive.google.com/drive/folders/1a7FzCHfEKUIWV1SXbZdWuvdZVpbUaXRa",
+                mirrorLink: "https://drive.google.com/drive/folders/1CDR0DccHYHolCyoOjxjtWJldCRki78zD?usp=drive_link",
+                winnerParty: "PMLN",
+                winnerPartyVotes: "69699",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "59851",
+                singleFile: false
+              },
+
+
+              NAT57: {
+                link: "https://drive.google.com/drive/folders/1wrWkwHB8LS7ZfZUJ7NiOJ6tdYhcBbFps",
+                mirrorLink: "https://drive.google.com/drive/folders/190WDNlOKWkqk9EBglZrrtF5we2gkykRc?usp=drive_link",
+                winnerParty: "PMLN",
+                winnerPartyVotes: "83331",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "56789",
+                singleFile: false
+              },
+
+
+              NAT106: {
+                link: "https://drive.google.com/drive/folders/1zZ-Kh4G75-ALhB8Mel9Wspo9dY3DaZtC",
+                mirrorLink: "https://drive.google.com/drive/folders/1_3oqddUUbq-3VHz0i1hsCUOHWoNOA_Q1?usp=drive_link",
+                winnerParty: "PMLN",
+                winnerPartyVotes: "137629",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "136924",
+                singleFile: false
+              },
+
+              NAT128: {
+                link: "https://drive.google.com/drive/folders/1gkFNZT1ejemwj0lHB6lWFmnohiVZzXVg",
+                mirrorLink: "#",
+                winnerParty: "IPP",
+                winnerPartyVotes: "172576",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "159024",
+                singleFile: true
+              },
+
+
+              NAT148: {
+                link: "https://drive.google.com/drive/folders/1SI8gtiMs22Y9hHHX2m3bk5JG-omQGLvP",
+                mirrorLink: "https://drive.google.com/drive/folders/1MTE-EQIzjrLURSZ8jGt5vzblA5ApJCRG?usp=drive_link",
+                winnerParty: "PPP",
+                winnerPartyVotes: "67326",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "67033",
+                singleFile: false
+              },
+
+
+              NAT151: {
+                link: "https://drive.google.com/drive/folders/1s1ZQyV3A08yDQtOkqYeQHM5FjeKZnYne",
+                mirrorLink: "https://drive.google.com/drive/folders/1tnlEROhPjI_G1DuASQhIriVpRwjX9Ro1?usp=drive_link",
+                winnerParty: "PPP",
+                winnerPartyVotes: "79080",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "71649",
+                singleFile: false
+              },
+
+
+              NAT250: {
+                link: "https://drive.google.com/drive/folders/1nl1HKj_Rzl5D96VQ6KbYPkLG730HoFXK",
+                mirrorLink: "https://drive.google.com/drive/folders/1wFZgOiWHs9mPnQ1XregZeMPPIQi91sig?usp=drive_link",
+                winnerParty: "MQMP",
+                winnerPartyVotes: "79925",
+                runnerUpParty: "PTI",
+                runnerUpPartyVotes: "37629",
+                singleFile: false
+
+              }
+
+
+
+            }
+
+
+
             function loadData() {
 
               let ListedData = {
@@ -426,99 +521,6 @@
               }
 
 
-
-
-              const ElectionData = {
-                NAT47: {
-                  link: "https://drive.google.com/drive/folders/1-M4_xA7tQlHPGk9G_WprHWv3CoZ2gMPM?usp=drive_link",
-                  mirrorLink: "https://drive.google.com/drive/folders/1TigN_5uT5lrI8_1ll5-s8ZBZyfhayBG7",
-                  winnerParty: "PMLN",
-                  winnerPartyVotes: "102502",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "86396",
-                  singleFile: false
-                },
-
-
-                NAT48: {
-                  link: "https://drive.google.com/drive/folders/1a7FzCHfEKUIWV1SXbZdWuvdZVpbUaXRa",
-                  mirrorLink: "https://drive.google.com/drive/folders/1CDR0DccHYHolCyoOjxjtWJldCRki78zD?usp=drive_link",
-                  winnerParty: "PMLN",
-                  winnerPartyVotes: "69699",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "59851",
-                  singleFile: true
-                },
-
-
-                NAT57: {
-                  link: "https://drive.google.com/drive/folders/1wrWkwHB8LS7ZfZUJ7NiOJ6tdYhcBbFps",
-                  mirrorLink: "https://drive.google.com/drive/folders/190WDNlOKWkqk9EBglZrrtF5we2gkykRc?usp=drive_link",
-                  winnerParty: "PMLN",
-                  winnerPartyVotes: "83331",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "56789",
-                  singleFile: false
-                },
-
-
-                NAT106: {
-                  link: "https://drive.google.com/drive/folders/1zZ-Kh4G75-ALhB8Mel9Wspo9dY3DaZtC",
-                  mirrorLink: "https://drive.google.com/drive/folders/1_3oqddUUbq-3VHz0i1hsCUOHWoNOA_Q1?usp=drive_link",
-                  winnerParty: "PMLN",
-                  winnerPartyVotes: "137629",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "136924",
-                  singleFile: false
-                },
-
-                NAT128: {
-                  link: "https://drive.google.com/drive/folders/1gkFNZT1ejemwj0lHB6lWFmnohiVZzXVg",
-                  mirrorLink: "#",
-                  winnerParty: "IPP",
-                  winnerPartyVotes: "172576",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "159024",
-                  singleFile: true
-                },
-
-
-                NAT148: {
-                  link: "https://drive.google.com/drive/folders/1SI8gtiMs22Y9hHHX2m3bk5JG-omQGLvP",
-                  mirrorLink: "https://drive.google.com/drive/folders/1MTE-EQIzjrLURSZ8jGt5vzblA5ApJCRG?usp=drive_link",
-                  winnerParty: "PPP",
-                  winnerPartyVotes: "67326",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "67033",
-                  singleFile: false
-                },
-
-
-                NAT151: {
-                  link: "https://drive.google.com/drive/folders/1s1ZQyV3A08yDQtOkqYeQHM5FjeKZnYne",
-                  mirrorLink: "https://drive.google.com/drive/folders/1tnlEROhPjI_G1DuASQhIriVpRwjX9Ro1?usp=drive_link",
-                  winnerParty: "PPP",
-                  winnerPartyVotes: "79080",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "71649",
-                  singleFile: false
-                },
-
-
-                NAT250: {
-                  link: "https://drive.google.com/drive/folders/1nl1HKj_Rzl5D96VQ6KbYPkLG730HoFXK",
-                  mirrorLink: "https://drive.google.com/drive/folders/1wFZgOiWHs9mPnQ1XregZeMPPIQi91sig?usp=drive_link",
-                  winnerParty: "MQMP",
-                  winnerPartyVotes: "79925",
-                  runnerUpParty: "PTI",
-                  runnerUpPartyVotes: "37629",
-                  singleFile: false
-
-                }
-
-
-
-              }
 
 
               const selectedFolder = document.getElementById('folderSelect').value;
@@ -738,12 +740,13 @@
                   }
 
 
-
+                const file =  document.getElementById('fileSelect')?.value
+                const folder =  document.getElementById('folderSelect')?.value
 
                   tr.innerHTML = `
                           <th scope="row">${row[0] || ''}</th>
                           <td >${row[1] || ''}</td>
-                          <td> <a target="_blank"  href="${encodeURIComponent(row[8])}">${index == 1 ? "See Evidence" : row[8] ? "Form 45" : "<span style='color:red;'>Unavailable</span>"}</a></td>
+                          <td> ${index == 1 ? `See Evidence` : row[8] ? `<a target="_blank"  href="${row[8]}">Form 45 </a>` : !row[8] && ElectionData[`${folder}${file}` || '47']?.singleFile ? `<span style='color:red;'>Unavailable</span>` : `<span> See evidance above</span>`}</td>
                           <td style=${row[2] > row[3] && row[2] > row[4] && row[2] > row[5] && row[2] > row[6] && row[2] > row[7] && [0, 1].includes(index) == false && "background-color:lightgreen;"}>${row[2] || ''}</td>
                           <td style=${row[3] > row[2] && row[3] > row[4] && row[3] > row[5] && row[3] > row[6] && row[3] > row[7] && [0, 1].includes(index) == false && "background-color:lightgreen;"} > ${row[3] || ''}</td>
                           <td style=${row[4] > row[2] && row[4] > row[3] && row[4] > row[5] && row[4] > row[6] && row[4] > row[7] && [0, 1].includes(index) == false && "background-color:lightgreen;"}>${row[4] || ''}</td>
