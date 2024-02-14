@@ -36,11 +36,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <script>
-    window.onload = function () {
-      // Set default values for dropdowns
+    window.onload = function () {      // Set default values for dropdowns
       document.getElementById('folderSelect').value = 'NAT'; // Default folder
-      document.getElementById('fileSelect').value = '47'; // Default file
-      // Load data with default values
+      document.getElementById('fileSelect').value = '47';
       loadData();
     };
 
@@ -342,6 +340,10 @@
                   value: "106"
                 },
                 {
+                  name: "128",
+                  value: "128"
+                },
+                {
                   name: "148",
                   value: "148"
                 }, {
@@ -409,6 +411,15 @@
                   runnerUpPartyVotes: "136924"
                 },
 
+                NAT128: {
+                  link: "https://drive.google.com/drive/folders/1gkFNZT1ejemwj0lHB6lWFmnohiVZzXVg",
+                  mirrorLink: "#",
+                  winnerParty: "IPP",
+                  winnerPartyVotes: "172576",
+                  runnerUpParty: "PTI",
+                  runnerUpPartyVotes: "159024"
+                },
+
 
                 NAT148: {
                   link: "https://drive.google.com/drive/folders/1SI8gtiMs22Y9hHHX2m3bk5JG-omQGLvP",
@@ -444,7 +455,8 @@
               }
 
               const selectedFolder = document.getElementById('folderSelect').value;
-              const selectedFile = document.getElementById('fileSelect').value;
+              const selectedFile = document.getElementById('fileSelect').value || '47';
+
 
               fileSelect.innerHTML = "";
 
@@ -465,6 +477,7 @@
                 }
               }
 
+              console.log({ selectedFile, selectedFolder })
 
               const url = `assets/xls/${selectedFolder}/${selectedFile ? selectedFile : "47"}.xlsx`;
 
@@ -538,7 +551,13 @@
 
             function clearTableData() {
               const recentSalesSection = document.querySelector('.table-main');
-              recentSalesSection.innerHTML = ''; // Clear table data
+              recentSalesSection.innerHTML = '';
+
+              document.getElementById('form45-party-01-stats').innerHTML = ""
+              document.getElementById('form45-party-02-stats').innerHTML = ""
+
+              document.getElementById('form45-party-01-name').innerHTML = ""
+              document.getElementById('form45-party-02-name').innerHTML = ""
             }
 
             function findMaxNumberWithIndex(array) {
@@ -661,7 +680,7 @@
                           <td style=${row[5] > row[2] && row[5] > row[3] && row[5] > row[4] && row[5] > row[6] && row[5] > row[7] && [0, 1].includes(index) == false && "background-color:lightgreen;"}>${row[5] || ''}</td>
                           <td style=${row[6] > row[2] && row[6] > row[3] && row[6] > row[4] && row[6] > row[5] && row[6] > row[7] && [0, 1].includes(index) == false && "background-color:lightgreen;"} >${row[6] || ''}</td>
                           <td style=${row[7] > row[2] && row[7] > row[3] && row[7] > row[4] && row[7] > row[5] && row[7] > row[6] && [0, 1].includes(index) == false && "background-color:lightgreen;"}>${row[7] || ''}</td>
-                          <td> <a target="_blank"  href="${row[8]}">${index == 1 ? "See Evidence" : row[8] ? "Form 45":"<span style='color:red;'>Missing</span>" }</a></td>
+                          <td> <a target="_blank"  href="${row[8]}">${index == 1 ? "See Evidence" : row[8] ? "Form 45" : "<span style='color:red;'>Missing</span>"}</a></td>
                         `;
 
 
