@@ -215,12 +215,13 @@
 
                           <div class="ps-3">
                             <div>
-                              <span style="color: chocolate;" class="large pt-1 fw-bold" id="form45-party-01-name"></span> <span  style="color: chocolate;"
+                              <span style="color: chocolate;" class="large pt-1 fw-bold"
+                                id="form45-party-01-name"></span> <span style="color: chocolate;"
                                 class="text fw-bold largept-2 ps-1" id="form45-party-01-stats"></span>
                             </div>
                             <div>
-                              <span  class="small pt-1" id="form45-party-02-name"> </span> <span
-                                class="small pt-2 ps-1" id="form45-party-02-stats"></span>
+                              <span class="small pt-1" id="form45-party-02-name"> </span> <span class="small pt-2 ps-1"
+                                id="form45-party-02-stats"></span>
                             </div>
 
 
@@ -244,8 +245,9 @@
 
                           <div class="ps-3">
                             <div>
-                              <span  style="color: chocolate;" class="large pt-1 fw-bold" id="winner-party-name"></span> <span  style="color: chocolate;"
-                                class="large fw-bold pt-2 ps-1" id="winner-party-votes"></span>
+                              <span style="color: chocolate;" class="large pt-1 fw-bold" id="winner-party-name"></span>
+                              <span style="color: chocolate;" class="large fw-bold pt-2 ps-1"
+                                id="winner-party-votes"></span>
                             </div>
                             <div>
                               <span class="small pt-1" id="runnerup-party-name"></span></span> <span
@@ -273,7 +275,9 @@
                           <div class="ps-3">
                             <div>
                               <a href="" target="_blank" class="text-primary small pt-1 fw-medium" id="evidance-link">
-                                <i class="bi bi-eye"></i>See Evidences </a>  | <a href="" target="_blank" class="text-primary small pt-1 fw-medium" id="evidance-link"> ( Mirror Link ) </a>
+                                <i class="bi bi-eye"></i>See Evidences </a> | <a href="" target="_blank"
+                                class="text-primary small pt-1 fw-medium" id="evidance-link-mirror"> ( Mirror Link )
+                              </a>
 
                             </div>
                             <div>
@@ -368,6 +372,7 @@
               const ElectionData = {
                 NAT47: {
                   link: "https://drive.google.com/drive/folders/1-M4_xA7tQlHPGk9G_WprHWv3CoZ2gMPM?usp=drive_link",
+                  mirrorLink: "https://drive.google.com/drive/folders/1TigN_5uT5lrI8_1ll5-s8ZBZyfhayBG7",
                   winnerParty: "PMLN",
                   winnerPartyVotes: "102502",
                   runnerUpParty: "PTI",
@@ -377,6 +382,7 @@
 
                 NAT48: {
                   link: "https://drive.google.com/drive/folders/1a7FzCHfEKUIWV1SXbZdWuvdZVpbUaXRa",
+                  mirrorLink: "https://drive.google.com/drive/folders/1CDR0DccHYHolCyoOjxjtWJldCRki78zD?usp=drive_link",
                   winnerParty: "PMLN",
                   winnerPartyVotes: "69699",
                   runnerUpParty: "PTI",
@@ -386,6 +392,7 @@
 
                 NAT57: {
                   link: "https://drive.google.com/drive/folders/1wrWkwHB8LS7ZfZUJ7NiOJ6tdYhcBbFps",
+                  mirrorLink: "https://drive.google.com/drive/folders/190WDNlOKWkqk9EBglZrrtF5we2gkykRc?usp=drive_link",
                   winnerParty: "PMLN",
                   winnerPartyVotes: "83331",
                   runnerUpParty: "PTI",
@@ -395,6 +402,7 @@
 
                 NAT106: {
                   link: "https://drive.google.com/drive/folders/1zZ-Kh4G75-ALhB8Mel9Wspo9dY3DaZtC",
+                  mirrorLink: "https://drive.google.com/drive/folders/1_3oqddUUbq-3VHz0i1hsCUOHWoNOA_Q1?usp=drive_link",
                   winnerParty: "PMLN",
                   winnerPartyVotes: "137629",
                   runnerUpParty: "PTI",
@@ -404,6 +412,7 @@
 
                 NAT148: {
                   link: "https://drive.google.com/drive/folders/1SI8gtiMs22Y9hHHX2m3bk5JG-omQGLvP",
+                  mirrorLink: "https://drive.google.com/drive/folders/1MTE-EQIzjrLURSZ8jGt5vzblA5ApJCRG?usp=drive_link",
                   winnerParty: "PPP",
                   winnerPartyVotes: "67326",
                   runnerUpParty: "PTI",
@@ -413,6 +422,7 @@
 
                 NAT151: {
                   link: "https://drive.google.com/drive/folders/1s1ZQyV3A08yDQtOkqYeQHM5FjeKZnYne",
+                  mirrorLink: "https://drive.google.com/drive/folders/1tnlEROhPjI_G1DuASQhIriVpRwjX9Ro1?usp=drive_link",
                   winnerParty: "PPP",
                   winnerPartyVotes: "79080",
                   runnerUpParty: "PTI",
@@ -422,6 +432,7 @@
 
                 NAT250: {
                   link: "https://drive.google.com/drive/folders/1nl1HKj_Rzl5D96VQ6KbYPkLG730HoFXK",
+                  mirrorLink: "https://drive.google.com/drive/folders/1wFZgOiWHs9mPnQ1XregZeMPPIQi91sig?usp=drive_link",
                   winnerParty: "MQMP",
                   winnerPartyVotes: "79925",
                   runnerUpParty: "PTI",
@@ -464,6 +475,11 @@
               const evidanceLink = document.getElementById('evidance-link');
               evidanceLink.href = ElectionData[`${selectedFolder}${selectedFile}`] ? ElectionData[`${selectedFolder}${selectedFile}`]?.link : "#"
 
+
+              const evidanceLinkMirror = document.getElementById('evidance-link-mirror');
+              evidanceLinkMirror.href = ElectionData[`${selectedFolder}${selectedFile}`] ? ElectionData[`${selectedFolder}${selectedFile}`]?.mirrorLink : "#"
+
+              
               const winnerPartyName = document.getElementById('winner-party-name');
               winnerPartyName.innerHTML = ElectionData[`${selectedFolder}${selectedFile}`] ? ElectionData[`${selectedFolder}${selectedFile}`]?.winnerParty : ""
 
